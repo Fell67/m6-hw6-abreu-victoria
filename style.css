@@ -107,7 +107,15 @@ main article {
 
 main p {
   line-height: 1.75;
-  margin-bottom: 48px;;
+  margin-bottom: 48px;
+}
+
+/* Drop cap of the first letter */
+main article p::first-letter {
+  font-size: 64px;
+  float: left;
+  margin: 0 10px;
+  line-height: normal;
 }
 
 main > article img {
