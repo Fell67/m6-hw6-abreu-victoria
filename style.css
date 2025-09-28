@@ -111,7 +111,7 @@ main p {
 }
 
 /* Drop cap of the first letter */
-main article p::first-letter {
+main article p:first-of-type::first-letter {
   font-size: 64px;
   float: left;
   margin: 0 10px;
@@ -151,15 +151,33 @@ span.tooltip:focus {
 /* show tooltip on hover/focus */
 span.tooltip:hover > span,
 span.tooltip:focus > span {
-  display: inline;
+  visibility: visible;
 }
 
 /* styling for tooltip bubble */
 span.tooltip span {
-  display: none;
+  visibility: hidden;
+  width: 330px;
+  bottom: 100%;
+  left: -165px;
+  margin-left: 50%;
+  background-color: black;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
 }
 
 /* styling for tooltip bubble arrow */
 span.tooltip span::after {
-  content: "";
+  content: " ";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
 }
